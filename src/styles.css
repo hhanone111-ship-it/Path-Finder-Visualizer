@@ -1,7 +1,6 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
-
+@source "../src";
 @custom-variant dark (&:is(.dark *));
 
 /*
@@ -18,7 +17,7 @@
  * 2. Register it in @theme inline as --color-<name>: var(--<name>)
  */
 
-@theme inline {
+@theme {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -59,6 +58,12 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-node-start: var(--node-start);
+  --color-node-end: var(--node-end);
+  --color-node-wall: var(--node-wall);
+  --color-node-visited: var(--node-visited);
+  --color-node-path: var(--node-path);
+  --color-node-weight: var(--node-weight);
 }
 
 :root {

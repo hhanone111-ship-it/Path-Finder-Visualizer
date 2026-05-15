@@ -10,11 +10,11 @@ interface NodeProps {
 
 const stateClasses: Record<NodeData["state"], string> = {
   empty: "bg-card hover:bg-accent",
-  start: "bg-[var(--node-start)] shadow-[0_0_8px_var(--node-start)]",
-  end: "bg-[var(--node-end)] shadow-[0_0_8px_var(--node-end)]",
-  wall: "bg-[var(--node-wall)]",
-  visited: "bg-[var(--node-visited)]",
-  path: "bg-[var(--node-path)]",
+  start: "bg-node-start shadow-[0_0_8px_var(--node-start)]",
+  end: "bg-node-end shadow-[0_0_8px_var(--node-end)]",
+  wall: "bg-node-wall",
+  visited: "bg-node-visited",
+  path: "bg-node-path",
 };
 
 export function Node({ node, onMouseDown, onMouseEnter, onMouseUp }: NodeProps) {
@@ -31,7 +31,7 @@ export function Node({ node, onMouseDown, onMouseEnter, onMouseUp }: NodeProps) 
       onMouseUp={onMouseUp}
       className={cn(
         "h-6 w-6 border border-border/40 transition-colors duration-100 select-none flex items-center justify-center text-[10px] font-bold text-foreground",
-        hasWeight ? "bg-[var(--node-weight)]" : stateClasses[node.state],
+        hasWeight ? "bg-node-weight" : stateClasses[node.state],
       )}
     >
       {hasWeight ? node.weight : null}

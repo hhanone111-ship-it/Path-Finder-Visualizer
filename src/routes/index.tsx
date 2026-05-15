@@ -94,11 +94,11 @@ function Index() {
 
 function Legend() {
   const items: { label: string; cls: string }[] = [
-    { label: "Start", cls: "bg-[var(--node-start)]" },
-    { label: "End", cls: "bg-[var(--node-end)]" },
-    { label: "Wall", cls: "bg-[var(--node-wall)]" },
-    { label: "Visited", cls: "bg-[var(--node-visited)]" },
-    { label: "Path", cls: "bg-[var(--node-path)]" },
+    { label: "Start", cls: "bg-node-start" },
+    { label: "End", cls: "bg-node-end" },
+    { label: "Wall", cls: "bg-node-wall" },
+    { label: "Visited", cls: "bg-node-visited" },
+    { label: "Path", cls: "bg-node-path" },
   ];
   return (
     <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
